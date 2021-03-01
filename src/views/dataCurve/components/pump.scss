@@ -1,0 +1,69 @@
+#pump {
+  font-size: 14px;
+  .pump-title {
+    display: flex;
+    justify-content: center;
+    .title-text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  .pump-header {
+    margin: 10px;
+  }
+
+  .pump-footer {
+    margin-top: 20px;
+  }
+
+  .pump-chart {
+    margin: 10px;
+    .chart{
+      height: 400px !important;
+    }
+  }
+
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: red;
+    border-color: red;
+  }
+
+  .el-checkbox__input.is-checked+.el-checkbox__label {
+    color: red;
+  }
+
+  .row-bg {
+    margin-top: 5px;
+  }
+
+  .col-bg-1 {
+    padding: 5px 2px 0 5px;
+  }
+
+  .col-bg {
+    padding: 5px 2px 0 45px;
+  }
+
+  .footer-row-bg {
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+
+  .type-card {
+    margin: 30px 10px;
+  }
+
+  .el-button {
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+  }
+
+  .history-middle {
+    margin: 10px 20px;
+  }
+
+  .datePicker {
+    width: 250px;
+  }
+}

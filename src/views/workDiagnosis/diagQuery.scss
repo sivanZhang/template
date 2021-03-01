@@ -1,0 +1,58 @@
+#diagQuery {
+    height: 100%;
+    font-size: 14px;
+    .btn-explain {
+      padding-left: 10px;
+      font-size: 12px;
+      color: #808080;
+      cursor: pointer;
+    }
+    .diag-title {
+      display: flex;
+      justify-content: center;
+      .title-text {
+        font-weight: bold;
+        font-size: 20px;
+      }
+    }
+    .border {
+      border: 1px solid #d3d6d5;
+      width: 600px;
+      height: 50px;
+      padding: 3px;
+      border-radius: 5px;
+    }
+    .diag-header {
+      margin: 10px;
+    }
+    .diag-container {
+      margin: 10px;
+    }
+    .row-bg {
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+    .title {
+      margin-top: 10px;
+      font-size: 17px;
+      font-weight: bold;
+    }
+    .col-bg-1 {
+      padding: 5px 2px 0 10px;
+    }
+    .col-bg {
+      padding: 5px 2px 0 45px;
+    }
+    .process-item {
+      margin-top: 5px;
+    }
+    .chart {
+      height:360px;
+    }
+    .buttonSave {
+      width: 110px;
+      height: 37px;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+  }
