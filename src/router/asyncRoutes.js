@@ -1,5 +1,4 @@
-﻿/* eslint-disable no-sparse-arrays */
-/**
+﻿/**
  *
  * @file 动态路由
  *
@@ -8,71 +7,10 @@ import GlobalEntry from "@/views/layout/GlobalEntry";
 import SidebarEntry from "@/views/layout/SidebarEntry";
 export default [
   {
-    path: "/realdata",
-    component: GlobalEntry,
-    redirect: "noRedirect",
-    name: "realdata",
-    meta: {
-      title: "实时数据",
-      icon: "gailan",
-      top: true
-    },
-    children: [
-      {
-        path: "mid",
-        isSidebar: true,
-        component: SidebarEntry,
-        name: "realdata-mid",
-        meta: {
-          title: "实时数据",
-          icon: "gailan"
-        },
-        children: [
-          {
-            path: "realdata",
-            name: "realdata-main",
-            component: () => import("@/views/realdata"),
-            meta: {
-              title: "实时数据表格",
-              icon: "chakan"
-            }
-          },
-          {
-            path: "realtime-data",
-            name: "realtime-data",
-            component: () => import("@/views/realTimeData/realtime-data"),
-            meta: {
-              title: "实时数据曲线",
-              icon: "chakan"
-            }
-          },
-          {
-            path: "history-data",
-            name: "history-data",
-            component: () => import("@/views/historyData/history-data"),
-            meta: {
-              title: "历史数据曲线",
-              icon: "chakan"
-            }
-          },
-          {
-            path: "point-position",
-            name: "point-position",
-            component: () => import("@/views/pointPosition/point_position"),
-            meta: {
-              title: "点位表格",
-              icon: "chakan"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
     path: "/admin",
     component: GlobalEntry,
     redirect: {
-      name:"system-mid"
+      name: "system-mid"
     },
     name: "system",
     meta: {
@@ -86,7 +24,7 @@ export default [
         component: SidebarEntry,
         name: "system-mid",
         redirect: {
-          name:"profession"
+          name: "profession"
         },
         meta: {
           title: "实时数据",

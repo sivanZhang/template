@@ -57,7 +57,7 @@ export default [
       {
         path: "homePage",
         name: "homePage-detail",
-        component: () => import("@/views/homePage"),
+        component: () => import("@/views/home-page"),
         meta: {
           title: "首页大屏",
           icon: "home"
