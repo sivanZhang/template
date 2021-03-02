@@ -1,27 +1,22 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import asyncRoutes from "./asyncRoutes"
-import constantRoutes from "./constantRoutes"
+import Vue from "vue";
+import Router from "vue-router";
+import constantRoutes from "./constantRoutes";
 
-Vue.use(Router)
-const createRouter = () => new Router({
+Vue.use(Router);
+const createRouter = () =>
+  new Router({
     scrollBehavior: () => ({
-        y: 0
+      y: 0
     }),
     routes: constantRoutes
-})
-const router = createRouter()
+  });
+const router = createRouter();
 
-function resetRouter() {
-    const newRouter = createRouter()
-    router.matcher = newRouter.matcher
+export function resetRouter() {
+  const newRouter = createRouter();
+  router.matcher = newRouter.matcher;
 }
-export {
-    asyncRoutes,
-    constantRoutes,
-    resetRouter,
-}
-export default router
+export default router;
 /**
  //当设置 true 的时候该路由不会再侧边栏出现 如401，login等页面，或者如一些编辑页面/edit/1
 hidden: true // (默认 false)

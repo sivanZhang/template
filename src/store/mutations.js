@@ -1,6 +1,5 @@
 export default {
-  SET_BASE_URL: (state, url, type = false) => {
-    state.hasSetUrl = type
-    state.BASE_URL = url
+  SET_CURRENT_BRANCH(state, obj) {
+    state.currentRouteBranch = obj;
   }
-}
+};
