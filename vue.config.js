@@ -1,7 +1,6 @@
 "use strict";
 const path = require("path");
 const defaultSettings = require("./src/settings.js");
-
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -30,12 +29,22 @@ module.exports = {
       }
     }
   },
-  configureWebpack: {
-    name: name,
-    resolve: {
-      alias: {
-        "@": resolve("src")
-      }
+  configureWebpack() {
+    return {
+      resolve: {
+        modules: ["node_modules"],
+        alias: {
+          "@": resolve("src"),
+          static: resolve("static")
+        },
+        extensions: [".js", ".vue", ".json", ".scss"]
+      },
+      amd: {
+        toUrlUndefined: true,
+      },
+      node: {
+        fs: "empty",
+      },
     }
   },
   chainWebpack(config) {
