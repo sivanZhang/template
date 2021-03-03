@@ -23,16 +23,6 @@ export default [
     hidden: true
   },
   {
-    path: "/login-task",
-    component: () => import("@/views/myTask/loginMyTask"),
-    hidden: true
-  },
-  {
-    path: "/mytaskplug",
-    component: () => import("@/views/myTask/myTaskPlug"),
-    hidden: true
-  },
-  {
     path: "/forgot",
     component: () => import("@/views/login/passwordReset")
   },
@@ -40,6 +30,7 @@ export default [
     path: "/signup",
     component: () => import("@/views/login/signup")
   },
+  // 这是没侧边栏的例子
   {
     path: "/",
     component: GlobalEntry,
@@ -50,7 +41,6 @@ export default [
     meta: {
       breadcrumb: false,
       title: "首页",
-      icon: "gailan",
       top: true
     },
     children: [
@@ -60,34 +50,32 @@ export default [
         component: () => import("@/views/home-page"),
         meta: {
           title: "首页大屏",
-          icon: "home"
         }
       }
     ]
   },
+  //  这是有侧边栏的例子
   {
     path: "/electricParamater",
-    component: GlobalEntry,
+    component: GlobalEntry,// 带顶部菜单
     redirect: {
       name: "indicatorDiagram"
     },
     name: "electricParamater",
     meta: {
       title: "项目",
-      icon: "tree-table",
-      top: true
+      top: true //如果现实在顶部菜单 加 top 并且=true  否则不加top
     },
     children: [
       {
         path: "mid2",
-        component: SidebarEntry,
-        isSide:true,
+        component: SidebarEntry,//带侧边栏
+        isSide:true,//带侧边栏的时候加isSide并=true，否则不加isSide
         name: "哈哈哈",
         meta: {
           title: "实时数据",
-          icon: "gailan"
         },
-        children: [
+        children: [// children里就是侧边栏的东西
           {
             path: "indicatorDiagram",
             name: "indicatorDiagram",
@@ -95,7 +83,6 @@ export default [
               import("@/views/electricParamater/indicatorDiagram"),
             meta: {
               title: "多个历史载荷示功图曲线",
-              icon: "tree"
             }
           },
           {
@@ -104,7 +91,6 @@ export default [
             component: () => import("@/views/electricParamater/ele-parameter"),
             meta: {
               title: "多个历史电参数示功图曲线",
-              icon: "tree"
             }
           },
           {
@@ -114,7 +100,6 @@ export default [
               import("@/views/electricParamater/signalElecticParam"),
             meta: {
               title: "电参及载荷示功图曲线",
-              icon: "tree"
             }
           },
           {
@@ -123,7 +108,6 @@ export default [
             component: () => import("@/views/electricParamater/manualDrawing"),
             meta: {
               title: "绘制电参数示功图界面",
-              icon: "tree"
             }
           },
           {
@@ -133,7 +117,6 @@ export default [
               import("@/views/electricParamater/manual-automatic"),
             meta: {
               title: "自动绘制电参数示功图",
-              icon: "tree"
             }
           }
         ]
