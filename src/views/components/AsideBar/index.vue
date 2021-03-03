@@ -8,9 +8,8 @@
       @select="handleClickMenu"
       :default-openeds="default_openeds_array"
     >
-
       <AsidebarItem
-        v-for="t of asideBarList"
+        v-for="t of asideBarList.filter(t => t.hidden!==true)"
         :aside-bar-list="t"
         :key="t.name"
       />
@@ -37,7 +36,6 @@ export default {
   },
   methods: {
     handleClickMenu(name) {
-      console.log('object',name);
       this.$router.push({ name });
     }
   }

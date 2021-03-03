@@ -161,7 +161,7 @@
         ></el-pagination>
       </div>
     </template>
-    <Drawer
+    <!-- <Drawer
       scrollable
       closable
       v-model="drawer"
@@ -173,14 +173,14 @@
     >
     自定义属性
     暂时未启用
-      <!-- <attrsBind
+      <attrsBind
         :project="project"
         :customAttrs="customAttrs"
         :attrsList="attrsList"
         @refresh_customAttrs="NewcustomAttrs"
         :attrsTypeNum="attrsTypeNum"
-      /> -->
-    </Drawer>
+      />
+    </Drawer> -->
   </div>
 </template>
 
