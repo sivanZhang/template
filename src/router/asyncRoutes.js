@@ -22,6 +22,7 @@ export default [
       {
         path: "system",
         component: SidebarEntry,
+        isSide: true,
         name: "system-mid",
         redirect: {
           name: "profession"
