@@ -81,6 +81,7 @@ export default [
       {
         path: "mid2",
         component: SidebarEntry,
+        isSide:true,
         name: "哈哈哈",
         meta: {
           title: "实时数据",
