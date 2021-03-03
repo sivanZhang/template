@@ -46,7 +46,6 @@
           <el-button
             type="primary"
             size="mini"
-            class="login-btn"
             :underline="false"
             @click="targetLogin()"
             >登录</el-button
@@ -127,7 +126,6 @@ export default {
       this.$router.push("/login");
     },
     targetPage(name) {
-      console.log('targetPage>>>',name);
       this.$router.push({ name });
     }
   }
@@ -139,51 +137,7 @@ export default {
   .menu-bg {
     display: flex;
     align-items: center;
-    .el-menu {
-      margin-right: 8px;
-      background: transparent;
-    }
     padding-right: 16px;
-  }
-  height: 48px;
-  z-index: 10;
-  background-color: green;
-  .login-btn {
-    border-radius: 16px;
-  }
-  .el-menu--horizontal > .el-menu-item {
-    &:hover {
-      // background: $activegreen-color;
-      border-color: transparent;
-    }
-    &.is-active {
-      color: red;
-      border: 1px solid transparent;
-      border-top: 0;
-      border-image: linear-gradient(
-        to top,
-        rgba(141, 171, 97, 1),
-        rgba(141, 171, 97, 0)
-      );
-      border-image-slice: 10;
-      background-color: transparent;
-      background-image: linear-gradient(
-        to top,
-        rgba(141, 171, 97, 0.4) 0%,
-        rgba(141, 171, 97, 0) 100%
-      );
-      font-weight: 600;
-    }
-    color: #ffffff;
-    font-weight: 500;
-    font-size: 18px;
-    height: 48px;
-    width: 145px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border: 0;
   }
 }
 </style>

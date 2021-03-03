@@ -2,7 +2,6 @@
   <!-- 侧边栏组件 -->
   <div class="aside-bar">
     <el-menu
-      class="el-menu_aside"
       :default-active="currentIndex"
       :collapse-transition="false"
       @select="handleClickMenu"
@@ -51,13 +50,3 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.el-menu {
-  height: 100%;
-}
-.aside-bar {
-  // @include scrollHideBar;
-  padding-top: 16px;
-  // background-color: $darkgreen-color;
-}
-</style>
