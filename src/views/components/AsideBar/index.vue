@@ -31,7 +31,7 @@ export default {
       );
     },
     default_openeds_array() {
-      return this.asideBarList.children.map((t) => t.name) ?? [];
+      return this.asideBarList.children?.map((t) => t.name) ?? [];
     },
     currentIndex() {
       return this.$route.meta.active ?? this.$route.name;
@@ -39,6 +39,7 @@ export default {
   },
   methods: {
     handleClickMenu(name) {
+      if(name===this.$route.name) return;
       this.$router.push({ name });
     },
   },
