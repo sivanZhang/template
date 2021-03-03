@@ -186,8 +186,8 @@
 
 <script>
 import { editUserDetail, deleteUser } from "@/api/admin";
-import { searchBind, getAttrsEntityList } from "@/api/attrs";
-import attrsBind from "@/components/projectDrawer/components/attrsBind";
+import { getAttrsEntityList } from "@/api/attrs";
+// import attrsBind from "@/components/projectDrawer/components/attrsBind";
 import thumbtackMixin from "@/utils/thumbtack-mixin";
 export default {
   mixins: [thumbtackMixin],
@@ -205,7 +205,7 @@ export default {
     }
   },
   components: {
-    attrsBind
+    // attrsBind
   },
   data() {
     return {
